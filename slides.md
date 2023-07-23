@@ -1,5 +1,5 @@
 ---
-theme: penguin
+theme: default
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
@@ -13,12 +13,11 @@ drawings:
   persist: false
 transition: slide-left
 title: Welcome to Slidev
-css: unocss
 ---
 
-# Welcome to Slidev
+# Website from zero to production
 
-Presentation slides for developers
+Presentation slides by Mahima Ramgolam
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -36,402 +35,307 @@ Presentation slides for developers
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-
-## transition: fade-out
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 <style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
+  .slidev-layout.cover h1 {
+    font-size: 45px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 900;
+    /* padding-bottom: 25px; */
+  }
 </style>
 
 <!--
-Here is another comment.
+[1mins]
+Hi everyone,
+Welcome to my session.
+I am Mahima Ramgolam. A frontend developer.
+First of all, I thank you for atttending my prsentation today,
+lets dive directly into the subject,
+my topic for today is Website from zero to production
 -->
 
 ---
 
-## layout: default
+# About this session
 
-# Table of contents
+<div class="text-green-200">We will be creating a single-page website/portfolio using VueJS/TailwindCSS without any backend
+</div>
 
-```
-<Toc minDepth="1" maxDepth="5"></Toc>
-```
+- Mainly for students or developers
+- deploy a simple website/portfolio online for <b class="text-green-300">free</b>.
 
-<Toc></Toc>
+<u>Slides as follows:</u>
+
+- How do we deploy a project for free online?
+- Create a new repository to Github for a project.
+- Use ready-made interactive UI components to build faster
+- Deploy the project repository to Vercel or Netlify.
+
+<style>
+
+  h1 {
+    font-size: 40px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+</style>
+
+<!--
+[3mins]
+We will be creating a single-page website/portfolio using VueJS/TailwindCSS and
+deploy it online through Vercel/Netlify
+
+
+- students - looking for a job - built portfolio
+- developers -developing projects -deploy website online to showcase recruiters
+-->
 
 ---
 
-transition: slide-up
+# How to deploy a website online for free?
 
-## level: 2
+<div class="flex justify-between">
 
-# Navigation
+  <div class="flex flex-col gap-4">
+  Using Vercel
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+  <a href="https://vercel.com/" target="_blank" class="border-none" >
+  <img
+  src="/vercel.png"
+  class="w[400px]"
+  />
+  </a>
 
-### Keyboard Shortcuts
+  <div class="text-sm">
+  Vercel's <u>frontend cloud</u> gives developers frameworks,<br/> workflows, and infrastructure to build a faster,<br/> more personalized web.
+  </div>
+  </div>
 
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
+  <div class="flex flex-col gap-4">
+  Using Netlify
+  <a href="https://www.netlify.com/" target="_blank" class="border-none" >
+  <img
+  src="/netlify.png"
+  class="w[400px] h-[225px]"
+  />
+  </a>
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
+  <div>
+  Use any <u>frontend framework</u> to build, <br/> preview, and deploy to our global network <br/> from Git.
+  </div>  
+  </div>
 
+</div>
+
+<style>
+
+  h1 {
+    font-size: 40px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+</style>
+
+---
+
+# Step : Create a new project repository to Github
+
+<div class="text-center"> Two ways to create/add project to github:
+</div>
+<br/>
+<div grid="~ cols-2 gap-4">
+<div >
+
+<h3 class="text-center pb-4">1. Your local machine </h3>
+
+<div class="flex items-center">
 <img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
+  src="/terminal.png"
+  class="w-56"
+/>
+<p class="text-sm">create project</p>
+</div>
+
+<div>
+<div  class="flex items-center pt-4">
+<img
+  src="/github-screenshot.png"
+  class="w-64 -mt-4"
 />
 
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<div class="text-sm pl-2">create a repository in <br/>github & add project to repo</div>
+</div>
+</div>
+<div class="pl-24 text-sm"> (manually) </div>
+</div>
 
----
+<div class="flex flex-col items-center">
 
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+<h3 class="text-center pb-4">2. Stackblitz</h3>
+<div class="text-center">
+<img
+  src="/stackblitz.png"
+  class="w-[400px]"
+/>
 
----
+<div class="text-sm">(in few clicks)</div>
 
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: string;
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id);
-  const newUser = { ...user, ...update };
-  saveUser(id, newUser);
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+</div>
+</div>
+</div>
 
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
+
+  h1 {
+    font-size: 40px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
+  }
 </style>
 
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
 <!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
+[5mins]
+1. Using stackblitz
+- provides a full development environment in the browser, it currently supports javascript/adjacent framework such vue/react/angular/nuxt/nextjs.
+- developers can create new project in seconds, connect these projects to their github code repositories to work on
+- it takes care of installing dependencies, compiling, bumdling and hot reloading
+- stakblitz is powered by webContainers
 
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
+StackBlitz instructions
+- Register for a free account on GitHub.
+- StackBlitz uses your GitHub account as a social login.
+- Register for a free StackBlitz account by using your GitHub account.
+- On StackBlitz's site, click START A NEW APP then select Vue to start a new Vue workspace.
 -->
 
 ---
 
-## class: px-20
+# Step : Add ready-made interactive UI components
 
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
+<div>Some examples of Tailwind UI components websites:
 </div>
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<div class="flex gap-4 items-center pb-12">
+<a href="https://tailwindui.com/" target="_blank" class="border-none" >
+<img
+  src="/tailwindUI.png"
+  class="w-32 h-8"
+/>
+</a>
+
+<a href="https://flowbite.com/" target="_blank" class="border-none" >
+<img
+  src="/flowbites.png"
+  class="w-32"
+/>
+</a>
+
+<a href="https://daisyui.com/" target="_blank" class="border-none" >
+<img
+src="/daisyui.png"
+class="w-32"
+/>
+</a>
+</div>
+
+# Demo:
+
+<div class="-mt-4" v-click>to add: </div>
+
+<ul v-after>
+<li>Header</li>
+<li>Hero section</li>
+<li>simple blog page</li>
+</ul>
+
+<!--
+[10mins]
+flowbites header
+flowbites > docs - navbar
+
+gallerry
+tailwindUI > applicationui > gridList
+-->
+
+<style>
+
+  h1 {
+    font-size: 35px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
+  }
+</style>
 
 ---
 
-## preload: false
+# Step : Deploy online
 
-# Animations
+<div class="flex justify-between">
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+  <div class="flex flex-col gap-4">
+  Using Vercel
 
-```html
-<div v-motion :initial="{ x: -80 }" :enter="{ x: 0 }">Slidev</div>
-```
+  <a href="https://daisyui.com/" target="_blank" class="border-none" >
+  <img
+  src="/vercel.png"
+  class="w[400px]"
+  />
+  </a>
 
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
+  <div class="text-sm">
+  Vercel's frontend cloud gives developers frameworks,<br/> workflows, and infrastructure to build a faster,<br/> more personalized web.
+  </div>
   </div>
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div class="flex flex-col gap-4">
+  Using Netlify
+  <a href="https://daisyui.com/" target="_blank" class="border-none" >
+  <img
+  src="/netlify.png"
+  class="w[400px] h-[225px]"
+  />
+  </a>
+
+  <div>
+  Use any frontend framework to build, <br/> preview, and deploy to our global network <br/> from Git.
+  </div>  
   </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
 
 </div>
 
----
+<style>
 
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
+  h1 {
+    font-size: 40px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
   }
-  frame "Foo" {
-    [Frame 4]
+</style>
+
+<!--
+[2mins]
+-->
+
+---
+
+# Thank you
+
+<style>
+
+  h1 {
+    font-size: 40px;
+    color: #34D399;
+    line-height: 4rem;
+    font-weight: 700;
   }
-}
+</style>
 
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-
-src: ./pages/multiple-entries.md
-hide: false
-
----
-
----
-
-layout: center
-class: text-center
-
----
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<!--
+[10mins]
+-->
